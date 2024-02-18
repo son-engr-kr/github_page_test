@@ -9,32 +9,20 @@
 <body>
 
 <div class="tab-header">
-    <button class="tab-link" onclick="changeTab(event, 'home')">Home</button>
-    <button class="tab-link" onclick="changeTab(event, 'team')">Team</button>
+    <!-- <button class="tab-link" onclick="changeTab(event, 'home')">Home</button> -->
+    <!-- <button class="tab-link" onclick="changeTab(event, 'team')">Team</button>
     <button class="tab-link" onclick="changeTab(event, 'research')">Research</button>
-    <button class="tab-link" onclick="changeTab(event, 'alumni')">Alumni</button>
+    <button class="tab-link" onclick="changeTab(event, 'alumni')">Alumni</button> -->
+
+    <button class="tab-link" onclick="loadContent('home')">Home</button>
+    <button class="tab-link" onclick="loadContent('team')">Team</button>
+    <button class="tab-link" onclick="loadContent('research')">Research</button>
+    <button class="tab-link" onclick="loadContent('alumni')">Alumni</button>
 </div>
 
-<div id="home" class="tab-content">
-    <h2>Welcome</h2>
-    <p>...</p>
-</div>
+<div id="content"></div>
 
 
-<div id="team" class="tab-content">
-    <h2>Our Team</h2>
-    <p>Meet our dedicated team...</p>
-</div>
-
-<div id="research" class="tab-content" style="display:none;">
-    <h2>Research</h2>
-    <p>Discover our research projects...</p>
-</div>
-
-<div id="alumni" class="tab-content" style="display:none;">
-    <h2>Alumni</h2>
-    <p>Our successful alumni...</p>
-</div>
 
 
 <script src="mainScript.js">

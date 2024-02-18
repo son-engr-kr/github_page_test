@@ -11,3 +11,15 @@ function changeTab(evt, tabName) {
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
 }
+
+function loadContent(tabName) {
+    fetch(`tabs/${tabName}.html`)
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('content').innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error loading the content:', error);
+            document.getElementById('content').innerHTML = '<p>Error loading content.</p>';
+        });
+}
