@@ -1,61 +1,124 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #E0F7FA; /* 연한 하늘색 */
-    color: #0277BD; /* 모던한 하늘색 */
+font-family: "Open Sans", sans-serif;
+color: #444444;
 }
 
-.tab-header {
-    overflow: hidden;
-    background: linear-gradient(to right, #81D4FA, #29B6F6); /* 하늘색 그라데이션 */
+a {
+color: #3498db;
+text-decoration: none;
 }
 
-.tab-link {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-    color: #FFFFFF; /* 텍스트 색상을 흰색으로 변경 */
+a:hover {
+color: #5faee3;
+text-decoration: none;
 }
 
-.tab-link.active {
-    background-color: #4FC3F7; /* 선택된 탭의 하늘색 */
-    color: #FFFFFF;
-    border-bottom: 2px solid #0288D1; /* 하단 표시선을 더 진한 하늘색으로 */
-}
-
-.tab-link:hover {
-    background-color: #B3E5FC; /* 호버 시 연한 하늘색 */
-}
-
-.tab-content {
-    display: none;
-    padding: 20px;
-    border: 1px solid #B3E5FC; /* 연한 하늘색 */
-    border-top: none;
-    background-color: #E1F5FE; /* 아주 연한 하늘색 */
-    animation: fadeEffect 1s;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
 }
 
 .image-container {
-    width: 200px;
-    height: 200px;
-    background-color: grey;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    width: 150px; /* 또는 원하는 너비 */
+    height: 200px; /* 또는 원하는 높이 */
+    background-color: grey; /* 이미지가 로드되지 않았을 때의 배경색 */
+    background-size: cover; /* 이미지가 컨테이너를 꽉 채우도록 */
+    background-position: center; /* 이미지를 중앙에 위치시킴 */
+    background-repeat: no-repeat; /* 이미지 반복 없음 */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* 좌우 컨테이너 간격 최대화 */
+}
+
+.navbar-nav {
+    display: flex;
+    list-style: none; /* 기본 리스트 스타일 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+}
+
+.navbar .navbar-right {
+    justify-content: flex-end; /* 우측 정렬 */
+    margin-right: 100px; /* 우측에 20px의 마진 추가 */
+}
+
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #555555;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #3498db;
+}
+
+.navbar .getstarted,
+.navbar .getstarted:focus {
+  background: #3498db;
+  padding: 8px 25px;
+  margin-left: 30px;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.navbar .getstarted:hover,
+.navbar .getstarted:focus:hover {
+  color: #fff;
+  background: #4aa3df;
+}
+
+
+/* "home-tab" 클래스에 대한 스타일 정의 */
+.navbar .home-tab {
+    font-size: 30px;
+}
+
+/* "Home" 탭이 활성화될 때의 스타일 */
+.navbar a.home-tab.active {
+    font-size: 30px; /* 활성화된 "Home" 탭의 폰트 사이즈 */
+    color: #000000; /* 활성화된 "Home" 탭의 텍스트 색상 */
 }
 
 footer {
-    background: linear-gradient(to right, #29B6F6, #81D4FA); /* 하늘색 그라데이션 */
-    color: #0277BD;
+    background-color: #f0f0f0; /* 밝은 회색 배경 */
+    color: #333;
     text-align: center;
     padding: 20px;
-    margin-top: 20px;
-    border-top: 1px solid #B3E5FC;
+    margin-top: 20px; /* 상단 여백 */
+    border-top: 1px solid #ccc; /* 상단 경계선 */
 }

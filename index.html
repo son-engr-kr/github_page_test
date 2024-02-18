@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>교수님 페이지</title>
+    <title>OO Lab</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,18 +13,29 @@
     <!-- <button class="tab-link" onclick="changeTab(event, 'team')">Team</button>
     <button class="tab-link" onclick="changeTab(event, 'research')">Research</button>
     <button class="tab-link" onclick="changeTab(event, 'alumni')">Alumni</button> -->
+    
+    <nav id="navbar" class="navbar">
+        <ul class="navbar-nav"> <!-- 왼쪽 정렬을 위한 컨테이너 -->
+            <li><a class="nav-link home-tab" onclick="loadContent('home')">OO Lab</a></li>
+        </ul>
+        <ul class="navbar-nav navbar-right"> <!-- 우측 정렬을 위한 컨테이너 -->
+            <li><a class="nav-link" onclick="loadContent('research')">Research</a></li>
+            <li><a class="nav-link" onclick="loadContent('team')">Team</a></li>
+            <li><a class="nav-link" onclick="loadContent('alumni')">Alumni</a></li>
+        </ul>
+    </nav>
+    
+     
 
-    <button class="tab-link" onclick="loadContent('home')">Home</button>
-    <button class="tab-link" onclick="loadContent('team')">Team</button>
-    <button class="tab-link" onclick="loadContent('research')">Research</button>
-    <button class="tab-link" onclick="loadContent('alumni')">Alumni</button>
+
+    
 </div>
 
 <div id="content"></div>
 
 
 <footer>
-    <p>Contact Us | More Info</p>
+    <p>OO University OOLab</p>
 </footer>
 
 <script src="mainScript.js">

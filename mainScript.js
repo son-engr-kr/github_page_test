@@ -16,7 +16,7 @@ function loadContent(tabName) {
 
 // 페이지 로드 시 'Home' 탭의 내용을 자동으로 로드
 document.addEventListener('DOMContentLoaded', function() {
-    const tabs = document.querySelectorAll('.tab-link');
+    const tabs = document.querySelectorAll('.nav-link');
     tabs.forEach(tab => {
         tab.addEventListener('click', function() {
             // 현재 active 클래스를 가진 모든 요소에서 active 클래스를 제거합니다.
@@ -31,5 +31,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     loadContent('home');
-    document.querySelector('.tab-link').classList.add('active'); // 첫 번째 탭을 활성화
+    document.querySelector('.nav-link').classList.add('active'); // 첫 번째 탭을 활성화
 });
