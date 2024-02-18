@@ -9,10 +9,17 @@
 <body>
 
 <div class="tab-header">
+    <button class="tab-link" onclick="changeTab(event, 'home')">Home</button>
     <button class="tab-link" onclick="changeTab(event, 'team')">Team</button>
     <button class="tab-link" onclick="changeTab(event, 'research')">Research</button>
     <button class="tab-link" onclick="changeTab(event, 'alumni')">Alumni</button>
 </div>
+
+<div id="home" class="tab-content">
+    <h2>Welcome</h2>
+    <p>...</p>
+</div>
+
 
 <div id="team" class="tab-content">
     <h2>Our Team</h2>
@@ -29,26 +36,11 @@
     <p>Our successful alumni...</p>
 </div>
 
-<script>
-    function changeTab(evt, tabName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tab-link");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(tabName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
+
+<script src="mainScript.js">
+
 </script>
 
 </body>
 </html>
 
-
-<script src="mainScript.js">
-
-</script>
