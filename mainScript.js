@@ -1,17 +1,3 @@
-function changeTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tab-link");
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(tabName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-
 function loadContent(tabName) {
     fetch(`tabs/${tabName}.html`)
         .then(response => response.text())
@@ -23,3 +9,8 @@ function loadContent(tabName) {
             document.getElementById('content').innerHTML = '<p>Error loading content.</p>';
         });
 }
+
+// 페이지 로드 시 'Home' 탭의 내용을 자동으로 로드
+document.addEventListener('DOMContentLoaded', function() {
+    loadContent('home');
+});
